@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#4E5E24">
+<meta property="og:title" content="EVO Mendoza Nova Safra 2026">
+<meta property="og:description" content="Azeite extravirgem de Mendoza, safra 2026. Lote único de 5 tambores de 200 L, pré-reserva até 10/10.">
+<meta property="og:image" content="icon-512.png">
+<title>EVO Mendoza Nova Safra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#F1F2EC; --surface:#FAFBF7; --ink:#1A2114; --muted:#5B6452; --line:#D5D9CB;
+    --olive:#4E5E24; --oil:#C6B62A; --oil-ink:#5A5310; --slate:#3F5A69; --onolive:#F4F6E8;
+    --display:"Gloock", Georgia, "Times New Roman", serif;
+    --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      color-scheme:dark;
+      --bg:#12160E; --surface:#1A2014; --ink:#ECEFE2; --muted:#A3AA95; --line:#2F3726;
+      --olive:#A9BD5C; --oil:#D9CB45; --oil-ink:#E6DA6A; --slate:#8FB0C0; --onolive:#12160E;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme:dark;
+    --bg:#12160E; --surface:#1A2014; --ink:#ECEFE2; --muted:#A3AA95; --line:#2F3726;
+    --olive:#A9BD5C; --oil:#D9CB45; --oil-ink:#E6DA6A; --slate:#8FB0C0; --onolive:#12160E;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--body)}
+  .wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+  h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;letter-spacing:-.005em}
+  h2{font-size:clamp(28px,4vw,38px);line-height:1.12}
+  h3{font-size:22px;line-height:1.2}
+  p{margin:0;max-width:62ch}
+  .eyebrow{font:600 12.5px/1 var(--body);text-transform:uppercase;letter-spacing:.14em;color:var(--olive)}
+  .muted{color:var(--muted)}
+  section{padding-block:56px;border-top:1px solid var(--line)}
+  .stack{display:grid;gap:16px}
+
+  /* hero */
+  header.hero{padding-block:28px 48px}
+  .brandbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{display:flex;align-items:center;gap:12px;color:var(--ink)}
+  .logo svg{width:44px;height:44px;flex:none}
+  .logo b{font:400 22px/1 var(--display);display:block}
+  .logo small{font:600 11px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .tag{font:500 13px/1 var(--mono);color:var(--oil-ink);border:1px solid var(--oil);padding:7px 10px;border-radius:999px}
+  .ridge{width:100%;height:auto;display:block;margin-block:36px 28px;max-width:100%}
+  .hero h1{font-size:clamp(40px,7vw,76px);line-height:1.02;max-width:15ch}
+  .hero h1 em{font-style:normal;color:var(--olive)}
+  .lede{font-size:20px;line-height:1.55;margin-top:20px;max-width:56ch}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+  .btn{display:inline-block;font:600 16px/1 var(--body);padding:15px 20px;border-radius:10px;text-decoration:none;border:1px solid var(--ink)}
+  .btn.primary{background:var(--olive);border-color:var(--olive);color:var(--onolive)}
+  .btn.ghost{color:var(--ink);background:transparent}
+  .btn:focus-visible{outline:3px solid var(--oil);outline-offset:2px}
+
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:44px}
+  .fact{background:var(--surface);padding:18px 18px 16px}
+  .fact b{display:block;font:500 30px/1.05 var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+  .fact span{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
+  @media (max-width:760px){.facts{grid-template-columns:repeat(2,1fr)}}
+
+  /* safra timeline */
+  .timeline{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+  .timeline li{position:relative;padding:22px 14px 0 0;border-top:3px solid var(--line)}
+  .timeline li.done{border-top-color:var(--olive)}
+  .timeline li.now{border-top-color:var(--oil)}
+  .timeline li::before{content:"";position:absolute;top:-8px;left:0;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--line)}
+  .timeline li.done::before{border-color:var(--olive);background:var(--olive)}
+  .timeline li.now::before{border-color:var(--oil);background:var(--oil)}
+  .timeline .when{font:500 13px/1 var(--mono);color:var(--muted)}
+  .timeline .what{font-weight:600;margin-top:8px;line-height:1.3}
+  .timeline .note{font-size:14.5px;color:var(--muted);margin-top:4px;line-height:1.45}
+  @media (max-width:760px){
+    .timeline{grid-template-columns:1fr;gap:18px}
+    .timeline li{border-top:0;border-left:3px solid var(--line);padding:0 0 0 18px}
+    .timeline li.done{border-left-color:var(--olive)} .timeline li.now{border-left-color:var(--oil)}
+    .timeline li::before{top:2px;left:-8px}
+  }
+
+  /* laudo */
+  .sheet{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:28px}
+  .sheet-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:500 13px/1.4 var(--mono);color:var(--muted);padding-bottom:14px;border-bottom:1px dashed var(--line)}
+  .tbl{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:15.5px}
+  td:first-child{width:34%;color:var(--muted)}
+  th,td{padding:11px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font:600 12px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  td.v{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+  td.hl{color:var(--olive);font-weight:500}
+  .foot{font-size:13.5px;color:var(--muted);margin-top:12px}
+
+  /* two-col */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+  @media (max-width:760px){.grid2{grid-template-columns:1fr}}
+  ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  ul.clean li{padding-left:22px;position:relative}
+  ul.clean li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--oil)}
+
+  /* offer */
+  .offer{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start;margin-top:28px}
+  @media (max-width:760px){.offer{grid-template-columns:1fr}}
+  .price{background:var(--olive);color:var(--onolive);border-radius:16px;padding:26px}
+  .price .lbl{font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+  .price .big{font:400 54px/1 var(--display);margin-top:12px}
+  .price .big small{font:500 18px var(--body)}
+  .price .sub{margin-top:10px;font:500 15px/1.5 var(--mono)}
+  .price .after{margin-top:16px;padding-top:14px;border-top:1px solid color-mix(in srgb,var(--onolive) 30%,transparent);font-size:15px}
+  .steps{list-style:none;padding:0;margin:0;display:grid;gap:14px;counter-reset:s}
+  .steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;counter-increment:s}
+  .steps li::before{content:counter(s);font:500 15px/34px var(--mono);text-align:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--olive);color:var(--olive)}
+  .steps b{display:block}
+
+  .faq{display:grid;gap:10px;margin-top:24px}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  summary{cursor:pointer;font-weight:600}
+  summary:focus-visible{outline:3px solid var(--oil);outline-offset:3px;border-radius:6px}
+  details p{margin-top:10px;color:var(--muted)}
+
+  footer{padding-block:40px 56px;border-top:1px solid var(--line);font-size:14.5px;color:var(--muted)}
+  .reply{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+  @media (prefers-reduced-motion:no-preference){
+    .drop{animation:drip 2.8s ease-in-out 0.4s both}
+    @keyframes drip{0%{transform:translateY(-6px)}60%{transform:translateY(2px)}100%{transform:translateY(0)}}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="brandbar">
+      <div class="logo" aria-label="EVO Mendoza Nova Safra">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="23" fill="var(--olive)"/>
+          <path d="M6 31 L15 20 L20 25 L27 14 L35 24 L42 31 Z" fill="var(--onolive)" opacity=".95"/>
+          <path class="drop" d="M24 22c3.6 4.6 5.4 7.6 5.4 10a5.4 5.4 0 0 1-10.8 0c0-2.4 1.8-5.4 5.4-10z" fill="var(--oil)"/>
+        </svg>
+        <div><b>EVO Mendoza</b><small>Nova Safra 2026</small></div>
+      </div>
+      <span class="tag">Lote único · 1.000 L · pré-reserva</span>
+    </div>
+
+    <svg class="ridge" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 110 L90 70 L150 88 L240 30 L310 72 L380 52 L470 12 L540 60 L610 44 L700 80 L780 36 L860 66 L930 50 L1000 78 L1000 120 L0 120 Z" fill="var(--olive)" opacity=".16"/>
+      <path d="M0 110 L90 70 L150 88 L240 30 L310 72 L380 52 L470 12 L540 60 L610 44 L700 80 L780 36 L860 66 L930 50 L1000 78" fill="none" stroke="var(--olive)" stroke-width="2"/>
+      <circle cx="470" cy="12" r="5" fill="var(--oil)"/>
+    </svg>
+
+    <p class="eyebrow">Azeite extravirgem de Mendoza, Argentina</p>
+    <h1 style="margin-top:14px">A safra de 2026 acabou de sair da <em>almazara</em>.</h1>
+    <p class="lede">Colhido e extraído entre junho e julho, envasado agora. Um lote único de 5 tambores de 200 L para cozinhas profissionais do Rio Grande do Sul, com entrega prevista para o fim de novembro, a tempo das festas.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#reservar">Reservar um tambor</a>
+      <a class="btn ghost" href="#ficha">Ver ficha técnica</a>
+    </div>
+
+    <div class="facts" role="list">
+      <div class="fact" role="listitem"><b>&lt;0,3%</b><span>acidez livre (limite do extravirgem: 0,8%)</span></div>
+      <div class="fact" role="listitem"><b>200 L</b><span>por tambor, com revestimento alimentar</span></div>
+      <div class="fact" role="listitem"><b>5</b><span>tambores no lote. Quando acabar, acabou</span></div>
+      <div class="fact" role="listitem"><b>fim/nov</b><span>entrega prevista no seu restaurante</span></div>
+    </div>
+  </header>
+
+  <section id="safra" aria-labelledby="t-safra">
+    <p class="eyebrow">Por que agora</p>
+    <h2 id="t-safra" style="margin-top:10px">No Hemisfério Sul, o azeite novo chega quando o europeu já tem quase um ano.</h2>
+    <p class="muted" style="margin-top:14px">A colheita na Europa acontece entre outubro e janeiro. O azeite de Mendoza, colhido no outono argentino, chega ao Brasil no fim do ano com poucos meses de vida. Frescor significa mais aroma, mais amargor e picância equilibrados, e mais tempo de prateleira.</p>
+    <ol class="timeline">
+      <li class="done"><div class="when">abr – jun</div><div class="what">Colheita</div><div class="note">Olivais de Mendoza, clima seco e de altitude</div></li>
+      <li class="done"><div class="when">jun – jul</div><div class="what">Extração</div><div class="note">Só processos mecânicos, como exige o extravirgem</div></li>
+      <li class="now"><div class="when">set – out</div><div class="what">Envase e laudo</div><div class="note">Tambores de 200 L, laudo de laboratório por lote</div></li>
+      <li><div class="when">out – nov</div><div class="what">Importação</div><div class="note">Mendoza → Uruguaiana, com fiscalização do MAPA</div></li>
+      <li><div class="when">fim de nov</div><div class="what">Entrega</div><div class="note">Com nota fiscal e laudo do lote</div></li>
+    </ol>
+  </section>
+
+  <section id="ficha" aria-labelledby="t-ficha">
+    <p class="eyebrow">Ficha técnica</p>
+    <h2 id="t-ficha" style="margin-top:10px">Classificação extravirgem, com laudo por lote.</h2>
+    <div class="sheet">
+      <div class="sheet-head"><span>PRODUTO: azeite de oliva extravirgem · NCM 1509.20.00</span><span>ORIGEM: Mendoza, Argentina · SAFRA 2026</span></div>
+      <div class="tbl">
+        <table>
+          <tbody>
+            <tr><td>Classificação</td><td>Azeite de oliva extravirgem (IN MAPA 1/2012)</td></tr>
+            <tr><td>Acidez livre</td><td class="v hl">&lt; 0,30% <span class="muted" style="font-family:var(--body)">· o limite do extravirgem é 0,80%</span></td></tr>
+            <tr><td>Safra</td><td>2026 · colheita e extração entre junho e julho</td></tr>
+            <tr><td>Origem</td><td>Mendoza, Argentina</td></tr>
+            <tr><td>Variedades</td><td>típicas de Mendoza, como Arauco, Frantoio e Arbequina</td></tr>
+            <tr><td>Embalagem</td><td>tambor de 200 L com revestimento alimentar</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="foot"><b style="color:var(--ink)">Laudo completo do lote.</b> Peróxidos, absorbâncias K232 e K270 e análise sensorial vêm no laudo de laboratório reconhecido, enviado a você antes do sinal e entregue junto com o produto. Na entrada no Brasil, a carga ainda passa pela amostragem obrigatória do MAPA.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-uso">
+    <p class="eyebrow">Na sua cozinha</p>
+    <h2 id="t-uso" style="margin-top:10px">Feito para quem usa azeite todo dia, e não só no fim do prato.</h2>
+    <div class="grid2">
+      <div class="stack">
+        <h3>Para quem é</h3>
+        <ul class="clean">
+          <li>Restaurantes italianos, mediterrâneos e árabes de alto giro</li>
+          <li>Pizzarias que finalizam cada pizza com azeite</li>
+          <li>Grupos com várias unidades, que dividem o tambor entre as cozinhas</li>
+          <li>Hotéis, bufês e produção de massas, pães e antepastos</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <h3>Como conservar o tambor</h3>
+        <ul class="clean">
+          <li>Guarde em local fresco, longe de luz e de fontes de calor</li>
+          <li>Use torneira ou bomba de transferência e mantenha o tambor sempre fechado</li>
+          <li>Transfira para recipientes menores e escuros para o uso diário</li>
+          <li>Depois de aberto, o ideal é consumir em poucos meses</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservar" aria-labelledby="t-res">
+    <p class="eyebrow">Pré-reserva</p>
+    <h2 id="t-res" style="margin-top:10px">Reserve agora, sem compromisso e sem pagamento.</h2>
+    <div class="offer">
+      <ol class="steps">
+        <li><div><b>Você reserva até 10 de outubro</b><span class="muted">Diga quantos tambores quer. Nada é cobrado nesta etapa.</span></div></li>
+        <li><div><b>O lote confirma com 5 tambores reservados</b><span class="muted">Se o lote não fechar, a reserva é cancelada e ninguém paga nada.</span></div></li>
+        <li><div><b>Confirmado o lote, sinal de 30%</b><span class="muted">A importação é feita por trading habilitada no MAPA, com todos os documentos.</span></div></li>
+        <li><div><b>Entrega no fim de novembro</b><span class="muted">Com nota fiscal e laudo do lote. O saldo é pago na entrega.</span></div></li>
+      </ol>
+      <div class="price">
+        <div class="lbl">Preço de pré-reserva</div>
+        <div class="big">R$ 79,90 <small>/ litro</small></div>
+        <div class="sub">tambor 200 L = R$ 15.980</div>
+        <div class="after">Depois de 10/10: R$ 84,90/L. Entrega incluída em Porto Alegre e região metropolitana; demais cidades sob consulta.</div>
+      </div>
+    </div>
+    <div class="reply">
+      <h3>Como reservar</h3>
+      <p class="muted" style="margin-top:8px">Responda a mensagem ou o e-mail em que você recebeu este link, com o nome do restaurante, a cidade e quantos tambores quer. Confirmamos até 10 de outubro se o lote fechou.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-faq">
+    <p class="eyebrow">Perguntas frequentes</p>
+    <h2 id="t-faq" style="margin-top:10px">Antes de reservar</h2>
+    <div class="faq">
+      <details><summary>200 litros é muito para o meu restaurante.</summary><p>Muitos grupos dividem o tambor entre unidades ou com um restaurante parceiro. Se você prefere volumes menores, avise na resposta: estamos medindo o interesse em formatos de 5 L para o próximo lote.</p></details>
+      <details><summary>Por que o preço é maior que o do azeite de 5 L do atacado?</summary><p>O preço reflete o frescor da safra 2026, a acidez abaixo de 0,3% e o laudo por lote. Nos últimos anos, fiscalizações do MAPA e uma ação do Ministério Público Federal desclassificaram marcas vendidas como extravirgem. Aqui, a classificação vem documentada.</p></details>
+      <details><summary>Quem está por trás da EVO Mendoza?</summary><p>A EVO Mendoza Nova Safra é uma marca em lançamento de Alexandre Canova, com base no Rio Grande do Sul. O azeite é produzido e envasado em Mendoza, e a importação é feita por trading habilitada no MAPA.</p></details>
+      <details><summary>E se a carga atrasar na fiscalização?</summary><p>Todo azeite importado a granel passa por amostragem do MAPA, o que pode levar até 15 dias. Por isso a entrega é prevista para o fim de novembro. Qualquer mudança de data é comunicada antes.</p></details>
+    </div>
+  </section>
+
+  <footer>
+    EVO Mendoza Nova Safra · marca em lançamento · Rio Grande do Sul · Preços e condições válidos para o lote de pré-reserva 2026.
+  </footer>
+</div>
+
+</body>
+</html>
